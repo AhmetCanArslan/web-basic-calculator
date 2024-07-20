@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon" href="..\assets\images\Calculator.ico" type="image/x-icon">    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="calculator">
+        <input id="display" readonly>
+        <div id="keys"">
+            <button onclick="writeToDisplay('+')">+</button>
+            <button onclick="writeToDisplay('7')">7</button>
+            <button onclick="writeToDisplay('8')">8</button>
+            <button onclick="writeToDisplay('9')">9</button>
+            <button onclick="writeToDisplay('-')">-</button>
+            <button onclick="writeToDisplay('4')">4</button>
+            <button onclick="writeToDisplay('5')">5</button>
+            <button onclick="writeToDisplay('6')">6</button>
+            <button onclick="writeToDisplay('*')">*</button>
+            <button onclick="writeToDisplay('1')">1</button>
+            <button onclick="writeToDisplay('2')">2</button>
+            <button onclick="writeToDisplay('3')">3</button>
+            <button onclick="writeToDisplay('/')">/</button>
+            <button onclick="writeToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clear()">C</button>
+
+        </div>
+    </div>
+
+    <script src="script.css"></script>
+</body>
+</html>
