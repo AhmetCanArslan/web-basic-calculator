@@ -1,6 +1,6 @@
 button{
     width: 100px;
-    height: 100px;
+    height: 80px;
     border-radius: 50px;
     border: none;
     background-color: hsl(0, 0%, 30%);
@@ -8,7 +8,7 @@ button{
     font-size: 3rem;
     font-weight: bold;
     cursor: pointer;
-    user-select: none;
+    user-select: none;/* Disable text selection,visual pollution*/
 }
 .zero{
     grid-column: 1/3;

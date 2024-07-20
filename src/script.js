@@ -9,11 +9,13 @@ function writeToDisplay(input) {
   // Add the new input to the display
   display.value += input;
 }
+
 function clearDisplay() {
-  display.value = '';
+  display.value = ''; // simply clear the display 
 }
 function calculate() {
   let value = display.value;
+  // if the value contains a percentage, we need to calculate it differently. Because eval() doesn't support percentages
   if (value.includes('%')) {
     let parts = value.split('%');
     if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
@@ -27,7 +29,8 @@ function calculate() {
     }
   } else {
     try {
-      display.value = eval(value);
+        let result = safeMathEvaluate(value);
+        display.value = result.toString();
     } catch (e) {
       display.value = 'Error';
     }
@@ -38,6 +41,6 @@ function del() {
         // Clear the display if it contains invalid characters
         display.value = '';
     } else{
-        display.value = display.value.slice(0,-1);
+        display.value = display.value.slice(0,-1);// clear the last character
     }
 }
